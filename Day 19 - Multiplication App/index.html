@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multiplication App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+      font-family: 'Inter', sans-serif;
+    }
+
+    .app-card {
+      width: 550px;
+      height: 400px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+
+    .header {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .header h2 {
+      font-size: 30px;
+      font-weight: 700;
+      color: #2023b8;
+    }
+
+    .score,
+    .result {
+      font-size: 25px;
+      font-weight: 600;
+      color: #3436bd;
+    }
+
+    .question-box {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .question {
+      font-size: 38px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .answer-area {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .answer-input {
+      width: 250px;
+      padding: 12px;
+      border: 2px solid #e5e7eb;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .answer-input:focus {
+      border-color: #6366f1;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-card">
+    <div class="header">
+      <h2>Multiplication App</h2>
+      <div class="result">Score: <span class="score">0</span></div>
+    </div>
+    <div class="question-box">
+      <div class="question">What is <span class="multy1">5</span> Multiply by <span class="multy2">5</span>?</div>
+      <div class="answer-area">
+        <input type="number" class="answer-input" placeholder="Enter your answer" />
+        <button class="btn">Submit</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
