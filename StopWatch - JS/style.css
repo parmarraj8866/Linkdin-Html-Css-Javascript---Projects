@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* user-select: none; */
+}
+
+body {
+  background: #8ed8cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 50vw;
+  padding: 30px;
+  background: #58dfc9;
+  box-shadow: 1px 1px 10px 1px black;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.container h1 {
+  font-size: 50px;
+  color: rgb(18, 44, 66);
+  cursor: pointer;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 30px;
+}
+
+.allTimer .hours,
+.allTimer .minutes,
+.allTimer .second,
+.allTimer .millisecond {
+  font-size: 100px;
+  font-weight: 400;
+  color: rgb(11, 32, 88);
+  border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+.timer h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 50px;
+  cursor: pointer;
+}
+
+.btn button {
+  padding: 10px 30px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: rgb(17, 37, 76);
+  border: none;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn button:hover {
+  transform: scale(1.05);
+}
+
+.btn button:active {
+  transform: scale(0.96);
+}

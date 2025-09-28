@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #42c6ff, #5de0e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+.input-boxes {
+    margin-bottom: 25px;
+}
+
+.input1 {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.input1:focus {
+    border-color: #42c6ff;
+    background: #fff;
+    outline: none;
+}
+
+.input2 {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 16px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1.5px solid #ccc;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+.input2:focus {
+    border-color: #42c6ff;
+    background: #fff;
+    outline: none;
+}
+
+.passlength{
+     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #f1f5f9;
+    transition: 0.3s;
+}
+
+.inputrange{
+    accent-color: #42c6ff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.upparcase,
+.lowercase,
+.number,
+.notNumber {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #f1f5f9;
+    transition: 0.3s;
+}
+
+.passlength i,
+.upparcase i,
+.lowercase i,
+.number i,
+.notNumber i {
+    font-size: 18px;
+    width: 20px;
+}
+
+.btn1 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: #42c6ff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #199ec7;
+    transform: translateY(-2px);
+}
+
+
+.valid {
+    color: #2ecc71;
+}
+
+.invalid {
+    color: #e74c3c;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Login / SignUp Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Error in input box  -->
+    <div class="container">
+
+        <form class="login-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <input type="email" id="loginEmail" placeholder=" " required />
+                <label>Email</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="loginPassword" placeholder=" " required />
+                <label>Password</label>
+
+            </div>
+            <button type="button" class="login-btn">Login</button>
+
+            <p>Don't have an account? <a href="#" id="sing-up">Sign up</a></p>
+        </form>
+
+        <form class="signup-form">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <input type="text" id="signupName" placeholder=" " required />
+                <label>Full Name</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="signupEmail" placeholder=" " required />
+                <label>Email</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="signupPassword" placeholder=" " required />
+                <label>Password</label>
+            </div>
+            <button type="button" class="signUp-btn">Sign Up</button>
+            <p>Already have an account? <a href="#" id="login">Login</a></p>
+
+        </form>
+
+        <p class="errorShow"></p>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

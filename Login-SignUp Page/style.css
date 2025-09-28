@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0ecff, #f7f7f7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+    transition: all 0.3s ease;
+}
+
+form {
+    margin-bottom: 30px;
+    padding: 0;
+    border-radius: 8px;
+    background: transparent;
+}
+
+form h2 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 12px;
+    font-size: 16px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4285f4;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+    background: white;
+    padding: 0 4px;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -9px;
+    left: 10px;
+    font-size: 12px;
+    color: #4285f4;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #4285f4;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background: #3072dd;
+    transform: translateY(-1px);
+}
+
+
+.login-form p,
+.signup-form p {
+    color: #777;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-form p a,
+.signup-form p a {
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-form p a:hover,
+.signup-form p a:hover {
+    text-decoration: underline;
+}
+
+.login-form {
+    display: none;
+}
+
+.errorShow {
+    color: red;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    form h2 {
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styler Tool</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h2>Text Styler Tool</h2>
+        <div class="main">
+            <textarea id="textInput" placeholder="Write something here..."></textarea>
+            <div class="controls">
+                <div class="row">
+                    <label>Colour:</label>
+                    <select id="colour">
+                        <option disabled selected>-- Select Colour --</option>
+                        <option value="black">Black</option>
+                        <option value="white">White</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="purple">Purple</option>
+                        <option value="orange">Orange</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label>Font-size:</label>
+                    <select id="fontSize">
+                        <option disabled selected>-- Font-size --</option>
+                        <option value="12px">12</option>
+                        <option value="16px">20</option>
+                        <option value="20px">35</option>
+                        <option value="24px">45</option>
+                        <option value="30px">60</option>
+                        <option value="36px">86</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label>Font-weight:</label>
+                    <select id="fontWeight">
+                        <option disabled selected>-- Font-weight --</option>
+                        <option value="100">100</option>
+                        <option value="300">300</option>
+                        <option value="500">500</option>
+                        <option value="700">700</option>
+                        <option value="900">900</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label>Font-family:</label>
+                    <select id="fontFamily">
+                        <option disabled selected>-- Font-family --</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Segoe UI">Segoe UI</option>
+                        <option value="Trebuchet MS">Trebuchet MS</option>
+                        <option value="Lucida Sans">Lucida Sans</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="cursive">Cursive</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="sans-serif">Sans-serif</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label>Transform:</label>
+                    <select id="TextTransform">
+                        <option disabled selected>-- Text Transform --</option>
+                        <option value="uppercase">Uppercase</option>
+                        <option value="lowercase">Lowercase</option>
+                        <option value="capitalize">Capitalize</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label>Decoration:</label>
+                    <select id="TextDecoration">
+                        <option disabled selected>-- Text Decoration --</option>
+                        <option value="underline">Underline</option>
+                        <option value="line-through">Line-through</option>
+                        <option value="overline">Overline</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn">
+            <button>Apply Styles</button>
+            <button onclick="copyFNX()" style="margin-left: 10px;">Text Copy!</button>
+            <button onclick="clearAll()" style="margin-left: 10px;"> ClearAll</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎲 Dice Roll Simulator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color:  #00e5ff;
+    }
+
+    .inputbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .inputbox input {
+      flex: 1 1 200px;
+      max-width: 250px;
+      padding: 12px 18px;
+      border-radius: 12px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background: #ffffff;
+      color: #000;
+      transition: 0.3s;
+    }
+
+    .inputbox input:focus {
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.8);
+      border: 2px solid #00e5ff;
+    }
+
+    .container button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 12px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 15px;
+      background: linear-gradient(90deg, #00e5ff, #00ff85);
+      color: #000;
+      transition: 0.3s ease-in-out;
+    }
+
+    .container button:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+    .players {
+      width: 100%;
+      margin: 35px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 100px;
+      padding: 10px;
+      /* border: 1px solid black; */
+    }
+
+    .playerA h1,
+    .playerB h1 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #ffffff;
+    }
+
+    .players img {
+      width: 120px;
+      height: 120px;
+      border-radius: 15px;
+      background: rgba(30, 29, 29, 0.1);
+      padding: 12px;
+      box-shadow: 0 6px 20px rgba(0, 229, 255, 0.3);
+    }
+
+    .container p.result {
+      font-size: 25px;
+      margin-top: 30px;
+      color: #f0bc02;
+      font-weight: 500;
+    }
+
+    .rollerContainer {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      text-align: center;
+      padding: 25px;
+      display: none;
+      margin-top: 30px;
+      box-shadow: 0 8px 25px rgba(0, 229, 255, 0.2);
+    }
+
+    .rollerContainer h1 {
+      color: #ffd740;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .boxes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .rollerContainer img {
+      width: 500px;
+    }
+
+    .waiting span {
+      opacity: 0;
+      animation: blink 1.5s infinite;
+    }
+
+    .waiting span:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .waiting span:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+
+    .waiting span:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    @keyframes blink {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    @media (max-width: 600px) {
+      .container h1 {
+        font-size: 1.8rem;
+      }
+      .players img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1> <span>🎲</span>Dice Roll Simulator</h1>
+    <div class="inputbox">
+      <input class="inputA" type="text" placeholder="First Player Name..." />
+      <input class="inputB" type="text" placeholder="Second Player Name..." />
+    </div>
+    <button class="setplayer">Set Players</button>
+
+    <div class="players">
+      <div class="playerA">
+        <h1 class="playerA">Player 1</h1>
+        <img class="imageA" src="./dice1.png" alt="Dice for Player 1" />
+      </div>
+      <div class="playerB">
+        <h1 class="playerB">Player 2</h1>
+        <img class="imageB" src="./dice1.png" alt="Dice for Player 2" />
+      </div>
+    </div>
+
+    <button class="startBtn">Start</button>
+    <p class="result">"Let's Begin The Game!"</p>
+  </div>
+
+  <div class="rollerContainer">
+    <h1 class="waiting">Waiting<span>.</span><span>.</span><span>.</span></h1>
+    <div class="boxes">
+      <img src="./diceroll.gif" alt="">
+      <img src="./diceroll.gif" alt="">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

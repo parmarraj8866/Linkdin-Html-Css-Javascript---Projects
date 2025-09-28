@@ -1,0 +1,172 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.icon h1 {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.inputbox {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+.inputbox:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.section-input {
+    margin-bottom: 20px;
+}
+
+#textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+#textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.twoBtn {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+}
+
+.twoBtn button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twoBtn button span {
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.twoBtn button.Update {
+    background-color: #2ecc71;
+    display: none;
+}
+
+.twoBtn button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.twoBtn button.Update:hover {
+    background-color: #27ae60;
+}
+
+.container2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.editBtn,
+.deleteBtn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-right: 10px;
+}
+
+.editBtn {
+    background-color: #f39c12;
+}
+
+.editBtn:hover {
+    background-color: #d68910;
+    transform: translateY(-1px);
+}
+
+/* Delete Button */
+.deleteBtn {
+    background-color: #e74c3c;
+}
+
+.deleteBtn:hover {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+}
+
+
+.item {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      padding: 15px 20px;
+      background-color: white;
+      border-radius: 10px;
+      margin: 10px;
+      width: 500px;
+}
+.item p{
+    margin: 8px 0;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guess Game</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    .container {
+      background: #fff;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      width: 600px;
+      max-width: 95%;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .container h2 {
+      margin-bottom: 25px;
+      font-size: 30px;
+      color: #333;
+    }
+
+    input[type="number"] {
+      padding: 18px;
+      width: 85%;
+      font-size: 20px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+      transition: border 0.3s;
+    }
+
+    input[type="number"]:focus {
+      border-color: #2575fc;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 16px 35px;
+      font-size: 20px;
+      background: #2575fc;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #1e5fd7;
+    }
+
+    .result {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #444;
+      min-height: 35px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 24px;
+      color: #222;
+    }
+
+    h3 span {
+      color: #2575fc;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>🎯 Guess the Number (1 - 100)</h2>
+    <div>
+      <input type="number" placeholder="Enter your guess...">
+    </div>
+    <button class="btn">Check</button>
+    <p class="result">Start guessing the number!</p>
+    <h3>Guess Counter: <span>0</span></h3>
+  </div>
+</body>
+
+
+<script src="script.js"></script>
+
+</html>
