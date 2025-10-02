@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Text Counter</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="counter-container">
+    <h2>Real-Time Character Counter</h2>
+    <textarea id="textInput" maxlength="320" placeholder="Type your text here (max 320 characters)..."></textarea>
+    <div class="count-box">
+      <div class="count-label">Characters: <span class="count-value" id="charCount">0</span></div>
+      <div class="count-label">Remaining: <span class="count-value" id="remainingCount">320</span></div>
+    </div>
+<div class="copybtn">
+      <button class="copy-button" onclick="copyText()">Copy!</button>
+</div> 
+ </div>
+</body>
+
+<script src="script.js"></script>
+</html>
